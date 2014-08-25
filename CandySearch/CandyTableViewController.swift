@@ -58,7 +58,11 @@ class CandyTableViewController: UITableViewController, UISearchBarDelegate, UISe
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return self.candies.count
+        if tableView == self.searchDisplayController.searchResultsTableView {
+            return self.filteredCandies.count
+        } else {
+            return self.candies.count
+        }
     }
 
     
@@ -66,7 +70,13 @@ class CandyTableViewController: UITableViewController, UISearchBarDelegate, UISe
         
         //ask for a reusable cell from the tableview, the tableview will create a new one if it doesn't have any
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        let candy = self.candies[indexPath.row]
+       
+        var candy : Candy
+        if (tableView == self.searchDisplayController.searchResultsTableView) {
+            candy = filteredCandies[indexPath.row]
+        } else {
+            candy = self.candies[indexPath.row]
+        }
         
         // Configure cell
         cell.textLabel.text = candy.name
@@ -74,6 +84,12 @@ class CandyTableViewController: UITableViewController, UISearchBarDelegate, UISe
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+          self.performSegueWithIdentifier("candyDetail", sender: tableView)
+    }
+    
+    
     
 
     /*
@@ -111,31 +127,53 @@ class CandyTableViewController: UITableViewController, UISearchBarDelegate, UISe
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "candyDetail" {
+            let candyDetailViewController = segue.destinationViewController as UIViewController
+            if sender as UITableView == self.searchDisplayController.searchResultsTableView {
+                let indexPath = self.searchDisplayController.searchResultsTableView.indexPathForSelectedRow()
+                let destinationTitle = self.filteredCandies[indexPath.row].name
+                candyDetailViewController.title = destinationTitle
+            } else {
+                let indexPath = self.tableView.indexPathForSelectedRow()
+                let destinationTitle = self.candies[indexPath.row].name
+                candyDetailViewController.title = destinationTitle
+            }
+        }
     }
-    */
+
+
+   
     
     // closure syntax {(parameters) -> (return type) in expression statements}
     
-    func filterContentForSearchText(searchText: String) {
-        // Filter the array using the filter method
-        self.filteredCandies = self.candies.filter({( candy: Candy) -> Bool in
-            // let categoryMatch = (scope == "All") || (candy.category == scope)
-            let stringMatch = candy.name.rangeOfString(searchText)
-            // return categoryMatch && (stringMatch != nil)
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        self.filteredCandies = self.candies.filter({( candy : Candy) -> Bool in
+            var categoryMatch = (scope == "All") || (candy.category == scope)
+            var stringMatch = candy.name.rangeOfString(searchText)
+            return categoryMatch && (stringMatch != nil)
         })
     }
     
     
     
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        let scopes = self.searchDisplayController.searchBar.scopeButtonTitles as [String]
+        let selectedScope = scopes[self.searchDisplayController.searchBar.selectedScopeButtonIndex] as String
+        self.filterContentForSearchText(searchString, scope: selectedScope)
+        return true
+    }
     
-    
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+        let scope = self.searchDisplayController.searchBar.scopeButtonTitles as [String]
+        self.filterContentForSearchText(self.searchDisplayController.searchBar.text, scope: scope[searchOption])
+        return true
+    }
     
     
     

@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		35BBD3A819AAC1C4001D28CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3A719AAC1C4001D28CB /* AppDelegate.swift */; };
 		35BBD3AB19AAC1C4001D28CB /* CandySearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3A919AAC1C4001D28CB /* CandySearch.xcdatamodeld */; };
-		35BBD3B019AAC1C4001D28CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BBD3AE19AAC1C4001D28CB /* Main.storyboard */; };
 		35BBD3B219AAC1C4001D28CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35BBD3B119AAC1C4001D28CB /* Images.xcassets */; };
 		35BBD3BE19AAC1C4001D28CB /* CandySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3BD19AAC1C4001D28CB /* CandySearchTests.swift */; };
 		35BBD3C819AACD1E001D28CB /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3C719AACD1E001D28CB /* Candy.swift */; };
 		35BBD3CA19AAD077001D28CB /* CandyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3C919AAD077001D28CB /* CandyTableViewController.swift */; };
+		37C5448819ABC4220049A271 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C5448719ABC4220049A271 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +31,13 @@
 		35BBD3A619AAC1C4001D28CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35BBD3A719AAC1C4001D28CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35BBD3AA19AAC1C4001D28CB /* CandySearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CandySearch.xcdatamodel; sourceTree = "<group>"; };
-		35BBD3AF19AAC1C4001D28CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35BBD3B119AAC1C4001D28CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		35BBD3B719AAC1C4001D28CB /* CandySearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandySearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BBD3BC19AAC1C4001D28CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35BBD3BD19AAC1C4001D28CB /* CandySearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandySearchTests.swift; sourceTree = "<group>"; };
 		35BBD3C719AACD1E001D28CB /* Candy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
 		35BBD3C919AAD077001D28CB /* CandyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandyTableViewController.swift; sourceTree = "<group>"; };
+		37C5448719ABC4220049A271 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +79,8 @@
 		35BBD3A419AAC1C4001D28CB /* CandySearch */ = {
 			isa = PBXGroup;
 			children = (
+				37C5448719ABC4220049A271 /* Main.storyboard */,
 				35BBD3A719AAC1C4001D28CB /* AppDelegate.swift */,
-				35BBD3AE19AAC1C4001D28CB /* Main.storyboard */,
 				35BBD3B119AAC1C4001D28CB /* Images.xcassets */,
 				35BBD3A919AAC1C4001D28CB /* CandySearch.xcdatamodeld */,
 				35BBD3A519AAC1C4001D28CB /* Supporting Files */,
@@ -195,8 +195,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35BBD3B019AAC1C4001D28CB /* Main.storyboard in Resources */,
 				35BBD3B219AAC1C4001D28CB /* Images.xcassets in Resources */,
+				37C5448819ABC4220049A271 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,17 +238,6 @@
 			targetProxy = 35BBD3B819AAC1C4001D28CB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		35BBD3AE19AAC1C4001D28CB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35BBD3AF19AAC1C4001D28CB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		35BBD3BF19AAC1C4001D28CB /* Debug */ = {
@@ -403,6 +392,7 @@
 				35BBD3C319AAC1C4001D28CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35BBD3C419AAC1C4001D28CB /* Build configuration list for PBXNativeTarget "CandySearchTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +401,7 @@
 				35BBD3C619AAC1C4001D28CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
