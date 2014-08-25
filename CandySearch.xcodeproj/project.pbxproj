@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		35BBD3A819AAC1C4001D28CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3A719AAC1C4001D28CB /* AppDelegate.swift */; };
 		35BBD3AB19AAC1C4001D28CB /* CandySearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3A919AAC1C4001D28CB /* CandySearch.xcdatamodeld */; };
-		35BBD3AD19AAC1C4001D28CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3AC19AAC1C4001D28CB /* ViewController.swift */; };
 		35BBD3B019AAC1C4001D28CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BBD3AE19AAC1C4001D28CB /* Main.storyboard */; };
 		35BBD3B219AAC1C4001D28CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35BBD3B119AAC1C4001D28CB /* Images.xcassets */; };
 		35BBD3BE19AAC1C4001D28CB /* CandySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3BD19AAC1C4001D28CB /* CandySearchTests.swift */; };
+		35BBD3C819AACD1E001D28CB /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3C719AACD1E001D28CB /* Candy.swift */; };
+		35BBD3CA19AAD077001D28CB /* CandyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BBD3C919AAD077001D28CB /* CandyTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,12 +31,13 @@
 		35BBD3A619AAC1C4001D28CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35BBD3A719AAC1C4001D28CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35BBD3AA19AAC1C4001D28CB /* CandySearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CandySearch.xcdatamodel; sourceTree = "<group>"; };
-		35BBD3AC19AAC1C4001D28CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35BBD3AF19AAC1C4001D28CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35BBD3B119AAC1C4001D28CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		35BBD3B719AAC1C4001D28CB /* CandySearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandySearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BBD3BC19AAC1C4001D28CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35BBD3BD19AAC1C4001D28CB /* CandySearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandySearchTests.swift; sourceTree = "<group>"; };
+		35BBD3C719AACD1E001D28CB /* Candy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
+		35BBD3C919AAD077001D28CB /* CandyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandyTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				35BBD3A719AAC1C4001D28CB /* AppDelegate.swift */,
-				35BBD3AC19AAC1C4001D28CB /* ViewController.swift */,
 				35BBD3AE19AAC1C4001D28CB /* Main.storyboard */,
 				35BBD3B119AAC1C4001D28CB /* Images.xcassets */,
 				35BBD3A919AAC1C4001D28CB /* CandySearch.xcdatamodeld */,
 				35BBD3A519AAC1C4001D28CB /* Supporting Files */,
+				35BBD3C719AACD1E001D28CB /* Candy.swift */,
+				35BBD3C919AAD077001D28CB /* CandyTableViewController.swift */,
 			);
 			path = CandySearch;
 			sourceTree = "<group>";
@@ -211,9 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35BBD3AD19AAC1C4001D28CB /* ViewController.swift in Sources */,
 				35BBD3A819AAC1C4001D28CB /* AppDelegate.swift in Sources */,
+				35BBD3C819AACD1E001D28CB /* Candy.swift in Sources */,
 				35BBD3AB19AAC1C4001D28CB /* CandySearch.xcdatamodeld in Sources */,
+				35BBD3CA19AAD077001D28CB /* CandyTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

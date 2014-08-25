@@ -1,7 +1,7 @@
 //
 //  AppDelegate.swift
 //  CandySearch
-//
+//  http://www.raywenderlich.com/76519/add-table-view-search-swift
 //  Created by Yi Wang on 8/24/14.
 //  Copyright (c) 2014 Yi. All rights reserved.
 //
